@@ -46,7 +46,10 @@
     line-height: 1.2;
   }
 
-
+  .limit__width {
+    /* margin on left and right */
+    width: 95%;
+  }
 
 
 
@@ -54,9 +57,14 @@
 #BRANDING-COLORS
 \*----------*/
 
+  /*
+    Color palette:;
+    http://paletton.com/#uid=53-0N0kllllaFw0g0qFqFg0w0aF
+  */
+
   .color__primary, {
     /* define website's primary color here for reference */
-    color: pink;
+    color: #2A4D6E;
   }
 
     .color__primary--bg {
@@ -111,25 +119,31 @@
 \*----------*/
 
   .header {
+    /* floating header nav bar via header--float, z-index default 20 */
+    height: 4rem; /* 64px */
+    background-color: white; /* change this to preferred color */
+    box-shadow: 0 2px 10px grey;
   }
 
-    .header--float {
-      /* floating header nav bar, z-index default 20 */
-      background-color: grey; /* change this to preferred color */
+    .header .limit__height {
+      height: 2rem;
     }
 
       .header--below {
         /* everything else below floating header nav bar */
-        padding-top: 1.5rem; /* change to at least height of nav bar */
-        max-width: 50em; /* change to preferred width */
+        padding-top: 4rem; /* height of nav bar */
+        max-width: 470px;
 
       }
 
     .header__nav {
-
+      width: 75%;
+      justify-content: space-around;
     }
 
-  .logo__img {
+  .container__img {
+      width: 25%;
+      justify-content: space-around;
   }
 
 

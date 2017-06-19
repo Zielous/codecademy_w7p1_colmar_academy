@@ -59,12 +59,7 @@
     width: 100%;
   }
 
-  .container__flex,
-  div,
-  span,
-  header,
-  nav,
-  footer {
+  .container__flex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,12 +77,14 @@
     /* everything below the floating nav bar */
     position: relative;
     margin: 0 auto;
-    max-width: 50em; /* default fallback width */
-    display: block;
+    max-width: 470px; /* default fallback width - for very wide screens */
     text-align: center;
   }
 
-
+  .limit__width {
+    /* margin on left and right for child containers */
+    width: 95%;
+  }
 
 
 
