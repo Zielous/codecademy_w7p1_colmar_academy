@@ -29,27 +29,12 @@
 #CUSTOM-FONTS
 \*----------*/
 
-@font-face {
+/*
+  Header: font-family: 'Oswald', sans-serif;
+  Body:   font-family: 'Quattrocento Sans', sans-serif;
+*/
 
-}
 
-
-
-
-/*----------*\
-#GLOBAL
-\*----------*/
-
-  html {
-    font-family: "Helvetica", sans-serif;
-    font-size: 16px;
-    line-height: 1.2;
-  }
-
-  .limit__width {
-    /* margin on left and right */
-    width: 95%;
-  }
 
 
 
@@ -60,6 +45,10 @@
   /*
     Color palette:;
     http://paletton.com/#uid=53-0N0kllllaFw0g0qFqFg0w0aF
+
+    Primary:    #2A4D6E    Blue
+    Secondary:  #378B2E   Green
+
   */
 
   .color__primary, {
@@ -67,20 +56,62 @@
     color: #2A4D6E;
   }
 
-    .color__primary--bg {
-      background-color: pink;
+    .color__primary--bg-light {
+      background-color: #F3F8FD;
+    }
+
+    .color__primary--bg-dark {
+      background-color: #041E37;
     }
 
 
 
   .color__secondary, {
     /* define website's secondary color here for reference */
-    color: blue;
+    color: #378B2E;
   }
 
-    .color__secondary--bg {
-      background-color: blue;
+    .color__secondary--bg-light {
+      background-color: #92D18B;
     }
+
+    .color__secondary--bg-dark {
+      background-color: #074600;
+    }
+
+
+
+
+
+
+/*----------*\
+#GLOBAL
+\*----------*/
+
+  html {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  h1,h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #2A4D6E;
+    margin: 2rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  .limit--width {
+    /* margin on left and right */
+    width: 90%;
+  }
 
 
 
@@ -115,7 +146,106 @@
 
 
 /*----------*\
-#HEADER-SECTION
+#SECTION-BUTTONS
+\*----------*/
+
+  button,
+  a,
+  .course {
+    transition: all 200ms;
+  }
+
+  .button__primary,
+  .button__secondary {
+    border-radius: 5px;
+    border: 1;
+  }
+
+  /* button with primary color */
+  .button__primary {
+  }
+
+    .button__primary:hover {
+      background-color: #92D18B;
+      color: white;
+      border-bottom: 0.2em solid #074600;
+    }
+
+    .button__primary:active {
+      background-color: #074600;
+      border-bottom: 0;
+    }
+
+      /* call-to-action style button */
+      .button__cta {
+        border-radius: 5px;
+        border: 0;
+        color: white;
+        background-color: #378B2E;
+      }
+
+        .button__cta:hover {
+          color: #378B2E;
+        }
+
+        .button__cta:active {
+          color: white;
+        }
+
+
+  /* button with secondary color */
+  .button__secondary {
+    color: white;
+    background-color: #041E37;
+  }
+
+    .button__secondary:hover {
+      background-color: #92D18B;
+      color: white;
+      border-bottom: 0.2em solid #074600;
+    }
+
+    .button__secondary:active {
+      background-color: #074600;
+      border-bottom: 0;
+    }
+
+.course__info {display: none;}
+
+  .color__primary, {
+    /* define website's primary color here for reference */
+    color: #2A4D6E;
+  }
+
+    .color__primary--bg-light {
+      background-color: #F3F8FD;
+    }
+
+    .color__primary--bg-dark {
+      background-color: #041E37;
+    }
+
+
+
+
+  /* nav buttons to switch out icons */
+  .button__nav {
+    background-color: white;
+    border-radius: 5px;
+    width: 30px;
+    max-height: auto;
+  }
+
+    .button__nav img:last-child {display:none}
+    .button__nav:hover img:first-child{display:none}
+    .button__nav:hover img:last-child{display:inline-block}
+
+
+
+
+
+/*----------*\
+#SECTION-HEADER
 \*----------*/
 
   .header {
@@ -125,7 +255,7 @@
     box-shadow: 0 2px 10px grey;
   }
 
-    .header .limit__height {
+    .header .limit--height {
       height: 2rem;
     }
 
@@ -133,7 +263,6 @@
         /* everything else below floating header nav bar */
         padding-top: 4rem; /* height of nav bar */
         max-width: 470px;
-
       }
 
     .header__nav {
@@ -149,18 +278,102 @@
 
 
 
+
+
+
+
 /*----------*\
-#HEADER-SECTION
+#SECTION-BANNER
 \*----------*/
 
-main {
+  .banners {
+    text-align: center;
+    padding-bottom: 2rem; /* 32px */
+  }
 
-}
+    .banners img {
+      width: 100%;
+      height: auto; /* 11.25rem, 180px */
+    }
+
+    .banners p {
+      margin: 0 1rem;
+    }
+
+    .banners button {
+      font-size: 1.5rem;
+      height: 3rem;
+
+    }
+
+    .banners button {
+      margin-top: 1.5rem; /* 24px */
+    }
+
+
 
 
 
 /*----------*\
-#FOOTER-SECTION
+#SECTION-ARTICLES
+\*----------*/
+
+  .articles {
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .article {
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px lightgrey;
+  }
+
+  .article, h2 {
+    text-align: left;
+  }
+
+    .article img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .article h2, p, button {
+      margin: 1rem 1rem;
+    }
+
+    .article button {
+      float: right;
+      font-size: 1rem;
+      height: 2rem;
+    }
+
+
+
+
+
+/*----------*\
+#SECTION-COURSES
+\*----------*/
+
+  .courses {
+    padding: 2rem 0;
+  }
+
+    .course {
+      padding-bottom: 1rem;
+    }
+
+    .course h2 {
+      color: white;
+      padding: 1rem 1rem;
+    }
+
+
+/*----------*\
+#SECTION-FOOTER
 \*----------*/
 
   .copyright {
