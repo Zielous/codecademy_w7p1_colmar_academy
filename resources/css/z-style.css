@@ -455,12 +455,36 @@
 
 
 
+
+/*----------*\
+#SECTION-COURSES
+\*----------*/
+
+  .thesis {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+    .thesis video {
+      width: 100%;
+      height: auto;
+    }
+
+
+
+
+
 /*----------*\
 #SECTION-FOOTER
 \*----------*/
 
   .copyright {
+
   }
+
+    .copyright {
+      padding: 1rem 0;
+    }
 
     .copyright--bg {
     }
