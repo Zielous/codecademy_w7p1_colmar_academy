@@ -94,7 +94,8 @@
     line-height: 1.2;
   }
 
-  h1,h2 {
+  h1,
+  h2 {
     font-family: "Oswald", sans-serif;
     font-size: 3rem;
     font-weight: bold;
@@ -108,10 +109,36 @@
     font-weight: normal;
   }
 
+  h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
   .limit--width {
     /* margin on left and right */
     width: 90%;
   }
+
+  .fa {
+  }
+
+    .fa--tiny {
+      font-size: 0.7em;
+    }
+
+    .fa--color-primary {
+      color: #2A4D6E;
+    }
+
+    .fa--margin-left {
+      margin-left: 0.5em;
+    }
+
+      .fa--margin-right {
+      margin-right: 0.5em;
+    }
 
 
 
@@ -150,15 +177,23 @@
 \*----------*/
 
   button,
+  .button__primary,
+  .button__secondary
+   {
+    height: 3em;
+  }
+
+  button,
   a,
-  .course {
+  .animated {
     transition: all 200ms;
   }
 
   .button__primary,
   .button__secondary {
     border-radius: 5px;
-    border: 1;
+    border: 1px;
+    max-height: 100%;
   }
 
   /* button with primary color */
@@ -210,7 +245,6 @@
       border-bottom: 0;
     }
 
-.course__info {display: none;}
 
   .color__primary, {
     /* define website's primary color here for reference */
@@ -236,9 +270,9 @@
     max-height: auto;
   }
 
-    .button__nav img:last-child {display:none}
-    .button__nav:hover img:first-child{display:none}
-    .button__nav:hover img:last-child{display:inline-block}
+    .button__nav img:last-child {display:none;}
+    .button__nav:hover img:first-child {display:none;}
+    .button__nav:hover img:last-child {display:inline-block;}
 
 
 
@@ -302,8 +336,6 @@
 
     .banners button {
       font-size: 1.5rem;
-      height: 3rem;
-
     }
 
     .banners button {
@@ -329,6 +361,7 @@
     margin-top: 1rem;
     border-radius: 5px;
     box-shadow: 0 5px 5px lightgrey;
+    background-color: #F3F8FD;
   }
 
   .article, h2 {
@@ -338,6 +371,7 @@
     .article img {
       max-width: 100%;
       max-height: 100%;
+      border-bottom: 5px solid #2A4D6E;
     }
 
     .article h2, p, button {
@@ -347,8 +381,14 @@
     .article button {
       float: right;
       font-size: 1rem;
-      height: 2rem;
     }
+
+    .article button {
+      width: 100%;
+      margin: 0 0;
+      border-radius: 0 0 5px 5px;
+    }
+
 
 
 
@@ -360,16 +400,59 @@
 
   .courses {
     padding: 2rem 0;
+    flex-direction: column;
   }
 
-    .course {
-      padding-bottom: 1rem;
+  .course {
+    margin: 0 auto;
+    height: 100%;
+  }
+
+    .course__subtitle {
+      float: left;
+      opacity: 0;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .course h2 {
+    .course__title {
       color: white;
       padding: 1rem 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0;
+      position: relative;
+      left: -5rem;
+      width: 100%;
     }
+
+    .course__info ul {
+      text-align: left;
+      margin-left: 1.5rem;
+    }
+
+    .course__info {
+      /*initially hide course__info and children */
+      max-height: 0;
+      overflow: hidden;
+    }
+
+        .course:hover {
+        padding-bottom: 1rem;
+      }
+
+        .course:hover .course__info {
+          /* allow max-height so will cover the children when they are visible */
+          max-height: 30rem;
+        }
+
+        .course:hover .course__title {
+          margin-left: 150px;
+        }
+
+        .course:hover .course__subtitle {
+          opacity: 1;
+        }
+
 
 
 /*----------*\
