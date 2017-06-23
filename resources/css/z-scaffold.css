@@ -77,14 +77,15 @@
     /* everything below the floating nav bar */
     position: relative;
     margin: 0 auto;
-    max-width: 470px; /* default fallback width - for very wide screens */
-    text-align: center;
+    max-width: 50em; /* default fallback width - for very wide screens */
   }
 
   .limit__width {
     /* margin on left and right for child containers */
     width: 95%;
   }
+
+
 
 
 
@@ -152,12 +153,12 @@
 
       .display__mobile {
         /* Only display for mobile */
-        display: initial;
+        display: inherit;
       }
 
       .display__mobile-tablet {
         /* Only display for mobile and tablet */
-        display: initial;
+        display: inherit;
       }
 
       .display__tablet {
