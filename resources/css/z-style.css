@@ -402,6 +402,10 @@
       margin: 1rem 1rem;
     }
 
+    .article .fa {
+      display: inline-block;
+    }
+
     .article button {
       font-size: 1rem;
     }
@@ -461,26 +465,30 @@
 
         .course:hover {
         padding-bottom: 1rem;
+        transition-delay: 300ms;
       }
 
         .course:hover .course__info {
           /* allow max-height so will cover the children when they are visible */
           max-height: 30rem;
+        transition-delay: 300ms;
         }
 
         .course:hover .course__title {
           margin-left: 150px;
-        }
+          transition-delay: 300ms;
+      }
 
         .course:hover .course__subtitle {
           opacity: 1;
+          transition-delay: 300ms;
         }
 
 
 
 
 /*----------*\
-#SECTION-COURSES
+#SECTION-THESIS
 \*----------*/
 
   .thesis {
@@ -553,7 +561,7 @@
           width: 100%;
       }
 
-      .container__logo {
+      .header .container__logo {
         justify-content: flex-start;
       }
 
@@ -619,24 +627,24 @@
         align-items: flex-start;
       }
 
-      .articles__sidebar {
-        display: flex;
-        box-sizing: border-box;
-        flex-direction: column;
-        width: 423px;
-        margin-right: 1rem;
-        padding-left: 1rem;
-        align-items: stretch;
-      }
+        .articles__sidebar {
+          display: flex;
+          box-sizing: border-box;
+          flex-direction: column;
+          width: 423px;
+          margin-right: 1rem;
+          padding-left: 1rem;
+          align-items: stretch;
+        }
 
-      .article__desktop {
-        margin-top: 2rem;
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        max-width: 60%;
-        box-sizing: border-box;
-        text-align: left;
-      }
+        .article__desktop {
+          margin-top: 2rem;
+          margin-left: 1.5rem;
+          margin-right: 1.5rem;
+          max-width: 60%;
+          box-sizing: border-box;
+          text-align: left;
+        }
 
           .article__desktop img {
             max-width: 100%;
@@ -690,6 +698,60 @@
             margin-left: 1rem;
             margin-bottom: 1rem;
           }
+
+
+
+
+
+    /*----------*\
+    #SECTION-COURSES
+    \*----------*/
+
+      .courses {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+        .courses h1 {
+          padding-bottom: 1rem;
+          width: 100%;
+        }
+
+        .course__title,
+        .course__subtitle {
+          margin-top: 1rem;
+          padding-top: 0;
+          padding-right: 0;
+        }
+
+      .course {
+        width: 30%;
+        margin: 1rem 1rem;
+      }
+
+      .course__img {
+        overflow: hidden;
+      }
+
+        .course__img img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px 5px 0 0;
+        }
+
+      .course__info {
+        min-height: 7rem;
+      }
+
+        .course:hover {
+        padding-bottom: 0;
+      }
+
+        .course:hover img {
+          opacity: 0.4;
+          transition-delay: 350ms;
+        }
 
 
   }
