@@ -153,12 +153,12 @@
 
       .display__mobile {
         /* Only display for mobile */
-        display: inherit;
+        display: initial;
       }
 
       .display__mobile-tablet {
         /* Only display for mobile and tablet */
-        display: inherit;
+        display: initial;
       }
 
       .display__tablet {
