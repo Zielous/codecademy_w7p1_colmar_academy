@@ -88,7 +88,7 @@
 #GLOBAL
 \*----------*/
 
-  html {
+  html, a {
     font-family: "Quattrocento Sans", sans-serif;
     font-size: 16px;
     line-height: 1.2;
@@ -114,6 +114,12 @@
     font-size: 1rem;
     font-weight: normal;
     margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 1rem 1rem;
   }
 
   .limit--width {
@@ -305,6 +311,10 @@
       justify-content: space-around;
     }
 
+      .header__nav a {
+        padding: 0.25rem 0.5rem;
+      }
+
   .container__img {
       width: 25%;
       justify-content: space-around;
@@ -321,27 +331,31 @@
 #SECTION-BANNER
 \*----------*/
 
-  .banners {
+  .banner__area {
     text-align: center;
     padding-bottom: 2rem; /* 32px */
   }
 
-    .banners img {
+    .banner__area img {
       width: 100%;
       height: auto; /* 11.25rem, 180px */
     }
 
-    .banners p {
+    .banner__area p {
       margin: 0 1rem;
     }
 
-    .banners button {
+    .banner__area button {
       font-size: 1.5rem;
     }
 
-    .banners button {
+    .banner__area button {
       margin-top: 1.5rem; /* 24px */
     }
+
+  .banner__text {
+    display: block;
+  }
 
 
 
@@ -519,9 +533,13 @@
         text-align: right;
       }
 
-      .header__nav a {
-        margin-right: 1rem;
-      }
+        .header__nav a {
+          margin-right: 1rem;
+        }
+
+        .header__nav a {
+          padding: 1rem 1rem;
+        }
 
       .limit--width-desktop {
           width: 100%;
@@ -532,7 +550,50 @@
       }
 
         .logo__img {
+          margin-left: 1rem; /* 1rem already set by "a" at start */
+        }
+
+
+
+
+    /*----------*\
+    #SECTION-BANNER
+    \*----------*/
+
+      .banner__area {
+        display: flex;
+        padding-top: 2rem;
+        align-items: center;
+      }
+
+        .banner__area img {
+          width: 60%;
           margin-left: 2rem;
+          align-self: flex-start;
+          border-radius: 5px;
+        }
+
+        .banner__text {
+          display: flex;
+          width: 40%;
+          margin-left: 2.5rem; /* 40px */
+          margin-right: 7rem;
+          align-content: center;
+          flex-direction: column;
+        }
+
+          .banner__text h1,
+          .banner__text p {
+            text-align: left;
+          }
+
+          .banner__text h1 {
+            font-size: 2rem;
+          }
+
+        .banner__area button {
+          height: 44px;
+          padding: 8px 0;
         }
 
   }
