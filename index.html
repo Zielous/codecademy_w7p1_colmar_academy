@@ -3,9 +3,9 @@
 
   <head>
     <title>Colmar Academy</title>
-<!--  <link rel="stylesheet" href="https://use.fontawesome.com/9a9515be05.css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/9a9515be05.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Quattrocento+Sans:400,700" rel="stylesheet">
--->
+
     <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/z-visiborder.css">
     <link rel="stylesheet" type="text/css" href="./resources/css/z-scaffold.css">
@@ -19,7 +19,7 @@
 
     <header class="header header--float  container__flex">
       <div class="container__flex  limit--width limit--width-desktop">
-        <div class="container__logo container__img  container__flex  limit--height">
+        <div class="container__logo container__flex  limit--height">
           <a href="#"><img class="logo__img color__primary" title="Colmar Academy" alt="logo" src="./resources/images/ic-logo.svg" /></a>
         </div>
         <nav class="display__mobile  header__nav  container__flex  limit--height">
@@ -29,7 +29,7 @@
             <a class="button__primary  button__nav" href="#">
               <img alt="On Campus" src="./resources/images/ic-online.svg">
               <img alt="On Campus" src="./resources/images/ic-online-hover.svg"></a>
-            <a class="button__primary  button__nav" href="#">
+            <a class="login button__primary  button__nav" href="#">
               <img alt="On Campus" src="./resources/images/ic-login.svg">
               <img alt="On Campus" src="./resources/images/ic-login-hover.svg"></a>
           </nav>
@@ -61,31 +61,49 @@
       <!-- #SECTION-ARTICLES -->
 
       <section class="articles  container__flex">
-        <div class="article  limit--width">
-        <div class="display__tablet-desktop">
-          <img alt="article-1" src="./resources/images/information-main.jpg">
-          <h2>Orientation date<i class="fa  fa-calendar  fa--margin-left"></i></h2>
-          <p>Tue 10/11 &amp; Wed 10/12: 8AM-3PM</p>
-          <button class="button__primary  button__cta">Read More<i class="fa fa-chevron-circle-right  fa--margin-left"></i></button>
-        </div>
-          <img alt="article-2" src="./resources/images/information-orientation-mobile.jpg">
-          <h2>Orientation date<i class="fa  fa-calendar  fa--margin-left"></i></h2>
-          <p>Tue 10/11 &amp; Wed 10/12: 8AM-3PM</p>
-          <button class="button__primary  button__cta">Read More<i class="fa fa-chevron-circle-right  fa--margin-left"></i></button>
+        <div class="article__desktop  container__flex  display__tablet-desktop">
+          <img alt="Keep practicing!" src="./resources/images/information-main.jpg">
+          <h1>It doesn't hurt to keep practicing</h1>
+          <p>Curabitur vitae libero in ipsum portitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Extiam eget magna laoreet, efficitur dolor consequat, tristique ligula.</p>
+          <p class="caps__upper"><i class="fa  fa-thumbs-up  fa--margin-right fa--color-primary"></i> Emanuel, Sr Strategist at Hiring.com</p>
         </div>
 
-        <div class="article  limit--width">
-          <img alt="article-3" src="./resources/images/information-campus-mobile.jpg">
-          <h2>Our campus<i class="fa  fa-map-marker  fa--margin-left  fa--color-primary"></i></h2>
-          <p>Find which campus is close to you</p>
-          <button class="button__primary  button__cta">Read More<i class="fa fa-chevron-circle-right  fa--margin-left"></i></button>
-        </div>
+        <div class="articles__sidebar  container__flex">
+          <div class="article  limit--width">
+            <div class="container__img">
+              <img alt="Orientation date" class="display__mobile" src="./resources/images/information-orientation-mobile.jpg">
+              <img alt="Orientation date" class="display__tablet-desktop" src="./resources/images/information-orientation.jpg">
+            </div>
+              <div class="article__content">
+              <h2>Orientation date<i class="display__mobile  fa  fa-calendar  fa--margin-left"></i></h2>
+              <p>Tue 10/11 &amp; Wed 10/12: 8AM-3PM</p>
+              <button class="button__primary  button__cta">Read More<i class="fa fa-chevron-circle-right  fa--margin-left"></i></button>
+              </div>
+          </div>
 
-        <div class="article  limit--width">
-          <img alt="article-4" src="./resources/images/information-guest-lecture-mobile.jpg">
-          <h2>Special guest lecture<i class="fa  fa-commenting  fa--margin-left"></i></h2>
-          <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-          <button class="button__primary  button__cta">Read More<i class="fa fa-chevron-circle-right  fa--margin-left"></i></button>
+          <div class="article  limit--width">
+            <div class="container__img">
+              <img alt="Campus location" class="display__mobile" src="./resources/images/information-campus-mobile.jpg">
+              <img alt="Campus location" class="display__tablet-desktop" src="./resources/images/information-campus.jpg">
+            </div>
+            <div class="article__content">
+              <h2>Our campus<i class="display__mobile  fa  fa-map-marker  fa--margin-left  fa--color-primary"></i></h2>
+              <p>Find which campus is close to you</p>
+              <button class="button__primary  button__cta">Read More<i class="fa fa-chevron-circle-right  fa--margin-left"></i></button>
+            </div>
+          </div>
+
+          <div class="article  limit--width">
+            <div class="container__img">
+              <img alt="Guest Lecture" class="display__mobile" src="./resources/images/information-guest-lecture-mobile.jpg">
+              <img alt="Guest Lecture" class="display__tablet-desktop" src="./resources/images/information-guest-lecture.jpg">
+            </div>
+            <div class="article__content">
+              <h2>Special guest lecture<i class="display__mobile  fa  fa-commenting  fa--margin-left  fa--color-primary"></i></h2>
+              <p>Join a keynote with Oliver Sack about music in medical treatment</p>
+              <button class="button__primary  button__cta">Read More<i class="fa fa-chevron-circle-right  fa--margin-left"></i></button>
+            </div>
+          </div>
         </div>
       </section>
 
