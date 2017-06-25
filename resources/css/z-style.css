@@ -14,19 +14,88 @@
 
     --- TABLE OF CONTENTS
 
-    #custom-fonts
-    #global
-    #branding-colors
-    #capitalisation
-    #header-section
-    #main-section
-    #footer-section
-    #responsive-designs
+    #section-global
+    #section-custom-fonts
+    #section-branding-colors
+    #section-buttons
+    #section-header
+    #section-banner
+    #section-articles
+    #section-courses
+    #section-thesis
+    #section-footer
+    #section-responsive-designs
 
 ******/
 
 /*----------*\
-#CUSTOM-FONTS
+#SECTION-GLOBAL
+\*----------*/
+
+  html {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: darkgrey;
+  }
+
+  h1,
+  h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #2A4D6E;
+    margin: 2rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 1rem 1rem;
+  }
+
+  .limit--width {
+    /* margin on left and right */
+    width: 90%;
+  }
+
+  .fa {
+  }
+
+    .fa--tiny {
+      font-size: 0.7em;
+    }
+
+    .fa--color-primary {
+      color: #2A4D6E;
+    }
+
+    .fa--margin-left {
+      margin-left: 0.5em;
+    }
+
+      .fa--margin-right {
+      margin-right: 0.5em;
+    }
+
+
+
+
+
+/*----------*\
+#SECTION-CUSTOM-FONTS
 \*----------*/
 
 /*
@@ -39,7 +108,7 @@
 
 
 /*----------*\
-#BRANDING-COLORS
+#SECTION-BRANDING-COLORS
 \*----------*/
 
   /*
@@ -78,101 +147,6 @@
     .color__secondary--bg-dark {
       background-color: #074600;
     }
-
-
-
-
-
-
-/*----------*\
-#GLOBAL
-\*----------*/
-
-  html, a {
-    font-family: "Quattrocento Sans", sans-serif;
-    font-size: 16px;
-    line-height: 1.2;
-  }
-
-  h1,
-  h2 {
-    font-family: "Oswald", sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    color: #2A4D6E;
-    margin: 2rem 1rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: normal;
-  }
-
-  h3 {
-    font-family: "Oswald", sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-    margin-bottom: 10px;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-    padding: 1rem 1rem;
-  }
-
-  .limit--width {
-    /* margin on left and right */
-    width: 90%;
-  }
-
-  .fa {
-  }
-
-    .fa--tiny {
-      font-size: 0.7em;
-    }
-
-    .fa--color-primary {
-      color: #2A4D6E;
-    }
-
-    .fa--margin-left {
-      margin-left: 0.5em;
-    }
-
-      .fa--margin-right {
-      margin-right: 0.5em;
-    }
-
-
-
-
-
-/*----------*\
-#CAPITALISATION
-\*----------*/
-
-  .caps__lower {
-    /* Everything not capitalised */
-  }
-
-  .caps__upper {
-    /* Everything capitalised */
-  }
-
-  .caps__first {
-    /* Capitalise first letter of each word */
-  }
-
-  .caps__none {
-    /* Reset to original text as per HTML */
-  }
-
-  .caps__inherit {
-    /* Copy parent capitalisation */
-  }
 
 
 
@@ -308,11 +282,15 @@
 
     .header__nav {
       width: 75%;
-      justify-content: space-around;
+      justify-content: space-between;
     }
 
       .header__nav a {
-        padding: 0.25rem 0.5rem;
+        padding-top: 1rem;
+        padding-bottom: 0;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        margin: 1rem 1rem;
       }
 
       .header__nav .login img {
@@ -323,8 +301,6 @@
       width: 25%;
       justify-content: space-around;
   }
-
-
 
 
 
@@ -528,7 +504,7 @@
 
 
 /*----------*\
-#RESPONSIVE-DESIGNS
+#SECTION-RESPONSIVE-DESIGNS
 \*----------*/
 
   @media only screen
@@ -546,15 +522,14 @@
 
       .header__nav {
         text-align: right;
+        font-size: 0.9rem;
       }
 
         .header__nav a {
           margin-right: 1rem;
-        }
-
-        .header__nav a {
           padding: 0.5rem 1rem;
-          font-family: "Oswald", sans-serif;
+          color: #2A4D6E;
+          font-weight: bold;
         }
 
       .limit--width-desktop {
@@ -563,11 +538,25 @@
 
       .header .container__logo {
         justify-content: flex-start;
+        width: 35%;
       }
 
         .logo__img {
           margin-left: 1rem; /* 1rem already set by "a" at start */
         }
+
+        .logo__text {
+          position: relative;
+          color: #2A4D6E;
+          bottom: 8px;
+          font-size: 1rem;
+        }
+
+        .logo__text:first-of-type {
+          font-weight: bold;
+          margin-left: 0.5rem;
+        }
+
 
 
 
@@ -660,6 +649,7 @@
           .articles .content-box__hero p:last-child {
             margin-top: 3rem;
             font-weight: bold;
+            color: black;
           }
 
         .content-box__content {
@@ -816,5 +806,22 @@
 @media only screen
   and (min-width: 1024px) {
   /* Selectors for desktop screens and bigger */
+
+    /*----------*\
+    #SECTION-HEADER
+    \*----------*/
+
+    .logo__text {
+      position: relative;
+      color: #2A4D6E;
+      bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .header__nav {
+      font-size: 1rem;
+    }
+
+
 
 }
