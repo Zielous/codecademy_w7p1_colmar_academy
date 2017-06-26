@@ -574,11 +574,12 @@
           margin-left: 1.5rem;
           align-self: flex-start;
           border-radius: 5px;
+          box-sizing: border-box;
         }
 
         .banner__text {
           display: flex;
-          width: 40%;
+          width: 423px;
           margin-left: 2.5rem; /* 40px */
           margin-right: 1.5rem;
           align-items: center;
@@ -627,13 +628,14 @@
           flex-direction: column;
           width: 423px;
           margin-right: 1rem;
+          margin-left: 1.5rem;
           align-items: stretch;
         }
 
         .content-box__hero {
           margin-left: 1.5rem;
-          margin-right: 1.5rem;
-          width: 60vw;
+          /* margin-right: 1.5rem; */
+          width: 60%;
           box-sizing: border-box;
           text-align: left;
         }
